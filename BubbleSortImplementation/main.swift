@@ -27,20 +27,27 @@ print("Unsorted:")
 print(dataSet)
 waitForUserInput()
 
-// One pass through the array to float the highest numer to the end.
-for j in 0..<dataSet.count - 1 {
+// Loop through the array "n" times
+// (however many times there are elements in the array)
+for i in 0..<dataSet.count {
     
-    // Compare left value to right value
-    if dataSet[j] > dataSet[j + 1] {
-        // Swap values (When left value is greater than the right value)
-        let temporaryValue = dataSet[j] // Set aside the left value (temporaryValue)
-        dataSet[j] = dataSet[j+1]       // Replace left with right
-        dataSet[j+1] = temporaryValue // Replacing right with the temporaryValue
+    // One pass through the array to float the highest numer to the end.
+    for j in 0..<dataSet.count - 1 {
+        
+        // Compare left value to right value
+        if dataSet[j] > dataSet[j + 1] {
+            // Swap values (When left value is greater than the right value)
+            let temporaryValue = dataSet[j] // Set aside the left value (temporaryValue)
+            dataSet[j] = dataSet[j+1]       // Replace left with right
+            dataSet[j+1] = temporaryValue // Replacing right with the temporaryValue
+        }
     }
+
+    // Print the array after the pass
+    print("Array after pass:")
+    print(dataSet)
+    waitForUserInput()
+    
 }
 
 
-// Print the array after the pass
-print("Array after pass:")
-print(dataSet)
-waitForUserInput()
