@@ -28,7 +28,7 @@ dataSet.append(15)
 dataSet.append(14)
 dataSet.append(13)
 dataSet.append(12)
-dataSet.append(11Ω)
+dataSet.append(11)
 dataSet.append(10)
 
 //for _ in 1...10 {
