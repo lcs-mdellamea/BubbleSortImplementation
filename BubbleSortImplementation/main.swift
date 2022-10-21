@@ -20,16 +20,16 @@ var dataSet: [Int] = []
 // Populate the list
 
 // Best case scenario
-dataSet.append(10)
-dataSet.append(11)
-dataSet.append(12)
-dataSet.append(13)
-dataSet.append(14)
-dataSet.append(15)
-dataSet.append(16)
-dataSet.append(17)
-dataSet.append(18)
 dataSet.append(19)
+dataSet.append(18)
+dataSet.append(17)
+dataSet.append(16)
+dataSet.append(15)
+dataSet.append(14)
+dataSet.append(13)
+dataSet.append(12)
+dataSet.append(11Ω)
+dataSet.append(10)
 
 //for _ in 1...10 {
 //    dataSet.append(Int.random(in: 1...100))
@@ -65,7 +65,7 @@ for i in 0..<dataSet.count {
             
         }
         
-        print("") // Why is this here
+        print("") // Pushes text down to the next line.
         
     }
     
