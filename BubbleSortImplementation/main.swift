@@ -11,7 +11,7 @@ func waitForUserInput() {
     print("")
     print("Press return to continue...")
     // Waits for input from the user, then discards it.
-    _ = readLine()
+    // _ = readLine() // COMMENT THIS OUT FOR TIME
 }
 
 // Create an empty list (array)
@@ -31,7 +31,7 @@ dataSet.append(12)
 dataSet.append(11)
 dataSet.append(10)
 
-//for _ in 1...10 {
+//for _ in 1...100 {
 //    dataSet.append(Int.random(in: 1...100))
 //}
 
@@ -39,6 +39,12 @@ dataSet.append(10)
 print("Unsorted:")
 print(dataSet)
 waitForUserInput()
+
+// Keep track of the start time (seconds sinceepoch)
+// When this line of code runs,
+// startTime contains the number of seconds since January 1, 1970.
+let startTime = Date().timeIntervalSince1970
+print("Starting sort...", terminator: "")
 
 // Loop through the array "n" times
 // (however many times there are elements in the array)
@@ -48,7 +54,7 @@ for i in 0..<dataSet.count {
     var swapped = false
     
     // One pass through the array to float the highest numer to the end.
-    for j in 0..<dataSet.count - 1 {
+    for j in 0..<dataSet.count - 1 - i {
         
         // Compare left value to right value
         print("Comparison \(j+1)...", terminator: "")
@@ -80,5 +86,11 @@ for i in 0..<dataSet.count {
     }
     
 }
+// Get endTime (seconds since epoch)
+let endTime = Date().timeIntervalSince1970
+
+// Get the elapsed time
+let elapsedTime = endTime - startTime
+print("Sort took \(elapsedTime) seconds")
 
 
